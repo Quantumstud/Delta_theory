@@ -1,0 +1,17 @@
+04-04-2024
+
+Hey Byunghoon! 
+
+You can directly make interfacial cells using POSCAR_Maker.ipynb jupyter notebook. But these will be of a certain size I used for my MD and interfacial energy calculations. 
+
+If you want cells of different sizes you will have to edit the z-vector in the "Transformation_Vectors.pickle" corresponding to the interface you are interested in first. 
+
+Then you will have to use Resource_Maker.py on these. These will output "Resources.pickle" files corresponding to the new structure dimensions in the interface folder.
+
+These "Resources.pickle" are used to create the structure. POSCAR_Maker.ipynb uses these to make poscars.
+
+"Resources.pickle" also contains information on Nearest Neighbors and Neighboring Octahedra lists for every octahedra. This information is not used in any of the codes I am sharing but may be useful in later parts of your project.
+
+Let me know if you have questions!
+
+Shash
