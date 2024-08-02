@@ -1,0 +1,48 @@
+{
+    "kwargs0": {
+        "azimuthal_offset": 0.0,
+        "azimuthal_sampling": 6.283185307179586,
+        "ensemble_axes_metadata": [
+            {
+                "_concatenate": true,
+                "_default_type": "index",
+                "_ensemble_mean": false,
+                "_main": true,
+                "_squeeze": false,
+                "endpoint": false,
+                "label": "x",
+                "offset": 3.2286913639150208,
+                "sampling": 0.0998564339355161,
+                "tex_label": null,
+                "tex_units": null,
+                "type": "ScanAxis",
+                "units": "\u00c5"
+            },
+            {
+                "_concatenate": true,
+                "_default_type": "index",
+                "_ensemble_mean": false,
+                "_main": true,
+                "_squeeze": false,
+                "endpoint": false,
+                "label": "y",
+                "offset": 2.2830295577827537,
+                "sampling": 0.0999866959612885,
+                "tex_label": null,
+                "tex_units": null,
+                "type": "ScanAxis",
+                "units": "\u00c5"
+            }
+        ],
+        "metadata": {
+            "energy": 300000.0,
+            "label": "intensity",
+            "reciprocal_space": false,
+            "semiangle_cutoff": 28,
+            "units": "arb. unit"
+        },
+        "radial_offset": 0.0,
+        "radial_sampling": 1.0
+    },
+    "type0": "PolarMeasurements"
+}

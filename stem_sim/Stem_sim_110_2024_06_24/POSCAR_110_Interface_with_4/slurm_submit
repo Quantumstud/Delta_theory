@@ -1,0 +1,24 @@
+#!/bin/bash
+#SBATCH --account=matgen_g  #yallocation  # Allocation name
+#SBATCH -C gpu&hbm80g
+#SBATCH --nodes=1        # Total # of nodes 
+#SBATCH -q regular	 # Request the queue
+#SBATCH -n 1
+#SBATCH --time=01:00:00   # Total run time limit (hh:mm:ss)
+#SBATCH -c 32
+#SBATCH --mem=80GB
+#SBATCH --gpus-per-task=1
+#SBATCH -J 0.0_DRX    # Job name
+####SBATCH -o out.%j     # Name of stdout output file
+####SBATCH --qos=regular
+###SBATCH -e error.%j     # Name of stderr error file
+#SBATCH --mail-user=tpmishra@lbl.gov #useremailaddress
+#SBATCH--mail-type=all   # Send email to above address at begin and end of job
+
+module load cudatoolkit/11.7
+source /global/homes/t/tpmishra/anaconda3/etc/profile.d/conda.sh
+conda activate abtem
+
+export OMP_NUM_THREADS=1
+##export PATH=$PATH:/global/homes/t/tpmishra/apps/vasp/perlmutter_cpu
+srun --cpu-bind=cores python stem_sim.py
